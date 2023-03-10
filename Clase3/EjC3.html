@@ -56,25 +56,28 @@
         <input type="text" name="nombre" />
 
         <!-- 1. Agregar un campo para el apellido -->
+        <label for="apellido" required>Apellido</label>
+        <input type="text" name="apellido" />
 
         <label for="email">Email</label>
         <!-- 2. Agregar el tipo correcto -->
-        <input type="???" name="email" />
+        <input type="email" name="email" />
 
         <label for="tema">Tema</label>
         <select name="tema">
           <option value="html">HTML</option>
           <option value="css">CSS</option>
           <!-- 3. Agregar JS -->
+          <option value="js" selected>JS</option>
         </select>
 
         <label for="consulta">Consulta</label>
         <!-- 4. Reemplazar por area de texto -->
-        <input type="tip: no es un tipo" disabled />
+        <textarea name="consulta"></textarea>
 
         <div>
           <!-- 5. Marcar por defecto -->
-          <input type="checkbox" name="rta_por_mail" required />
+          <input type="checkbox" name="rta_por_mail" required checked />
           <span>Recibir respuesta por mail</span>
         </div>
 
