@@ -1,0 +1,66 @@
+h2 {
+  color: darkblue;
+}
+p {
+  color: darkred;
+}
+
+h2.lenguaje {
+  color: darkgreen;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+h2.lenguaje + p {
+  color: darkgoldenrod;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.rojo {
+  color: darkred;
+}
+h2.rojo {
+  font-family: copperplate;
+}
+p.rojo {
+  font-family: papyrus;
+}
+.azul {
+  color: darkblue;
+}
+h2.azul {
+  font-family: monospace;
+}
+p.azul {
+  font-family: cursive;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+p {
+  text-align: justify;
+}
+
+h1 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 3em;
+  font-weight: 900;
+  text-align: center;
+  text-decoration: underline;
+}
+
+/* NUEVO */
+h2,
+div.contenedor {
+  border: 2px solid #0001;
+  padding: 3px 20px;
+}
+h2 {
+  margin-bottom: 5px;
+  border-top: 2px solid #0003;
+}
+div.contenedor {
+  margin-bottom: 20px;
+  border-bottom: 2px solid #0003;
+}
