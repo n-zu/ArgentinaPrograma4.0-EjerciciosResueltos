@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ingreso de Datos Personales</title>
+  </head>
+  <body>
+    <h1>Ingreso de Datos Personales</h1>
+    <form action="">
+      <fieldset>
+        <legend>Datos Principales</legend>
+        <label for="nombre">Nombre</label><br />
+        <input name="nombre" required maxlength="20" /><br />
+        <br />
+        <label for="apellido">Apellido</label><br />
+        <input name="apellido" required maxlength="25" /><br />
+        <br />
+        <label for="dni">DNI</label><br />
+        <input type="number" name="dni" required /><br />
+        <br />
+        <label for="bday">Cumpleaños</label><br />
+        <input type="date" name="bday" required /><br />
+        <br />
+        <label for="email">Email</label><br />
+        <input type="email" name="email" required /><br />
+        <br />
+      </fieldset>
+      <fieldset>
+        <legend>Datos Secundarios</legend>
+        <label for="estado_civil">Estado Civil</label><br />
+        <select name="estado_civil">
+          <option value="So">Soltera/o</option>
+          <option value="Ca">Casada/o</option>
+          <option value="Di">Divorciada/o</option>
+          <option value="Vi">Viuda/o</option>
+          <option value="Co">Conviviente</option></select
+        ><br />
+        <br />
+        <label for="intereses">Intereses</label><br />
+        <select name="intereses" multiple>
+          <option value="C">Culturales</option>
+          <option value="D">Deportivos</option>
+          <option value="T">Turísticos</option>
+          <option value="S">Sociales</option>
+          <option value="O">Otros</option></select
+        ><br />
+        <br />
+        <label for="desc_intereses">Descripción de desc_Intereses</label><br />
+        <textarea
+          name="desc_intereses"
+          multiple
+          maxlength="400"
+          rows="4"
+        ></textarea
+        ><br />
+        <br />
+        <label for="pais">País de Residencia</label><br />
+        <select name="pais">
+          <option value="Argentina">Argentina</option>
+          <option value="Bolivia">Bolivia</option>
+          <option value="Brasil">Brasil</option>
+          <option value="Colombia">Colombia</option>
+          <option value="Costa Rica">Costa Rica</option>
+          <option value="Chile">Chile</option>
+          <option value="México">México</option>
+          <option value="Nicaragua">Nicaragua</option>
+          <option value="Panamá">Panamá</option>
+          <option value="Paraguay">Paraguay</option>
+          <option value="Perú">Perú</option>
+          <option value="Uruguay">Uruguay</option>
+          <option value="Venezuela">Venezuela</option>
+          <option value="Otro">Otro</option></select
+        ><br />
+        <br />
+        <input type="checkbox" name="recibir_info" checked />
+        <label for="recibir_info">Recibir información adicional</label>
+        <br />
+      </fieldset>
+      <input
+        type="image"
+        src="https://www.pngall.com/wp-content/uploads/5/Login-Button-PNG-High-Quality-Image.png"
+        height="60px"
+      />
+    </form>
+  </body>
+</html>
