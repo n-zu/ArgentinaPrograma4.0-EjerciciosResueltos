@@ -1,0 +1,19 @@
+h2 {
+  color: darkblue;
+}
+p {
+  color: darkred;
+}
+
+h2.lenguaje {
+  color: darkgreen;
+}
+h2.lenguaje + p {
+  color: darkgoldenrod;
+}
+.rojo {
+  color: darkred;
+}
+.azul {
+  color: darkblue;
+}
