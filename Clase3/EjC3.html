@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ejercicio en clase 3</title>
+    <style>
+      * {
+        font-family: sans-serif;
+        box-sizing: border-box;
+      }
+      label,
+      input {
+        display: block;
+      }
+      label {
+        margin-top: 10px;
+      }
+      input,
+      select,
+      textarea {
+        margin-bottom: 20px;
+        width: 100%;
+      }
+      fieldset {
+        padding: 5px 20px;
+      }
+      input[type="checkbox"] {
+        display: inline;
+        width: auto;
+      }
+      textarea {
+        resize: vertical;
+        height: 5em;
+      }
+
+      button {
+        margin-bottom: 10px;
+        padding: 5px 10px;
+        float: right;
+      }
+
+      body {
+        padding: 10px;
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      }
+    </style>
+  </head>
+  <body>
+    <form action="#">
+      <fieldset>
+        <legend>Consultas Virtuales - Base</legend>
+
+        <label for="nombre" required>Nombre</label>
+        <input type="text" name="nombre" />
+
+        <!-- 1. Agregar un campo para el apellido -->
+
+        <label for="email">Email</label>
+        <!-- 2. Agregar el tipo correcto -->
+        <input type="???" name="email" />
+
+        <label for="tema">Tema</label>
+        <select name="tema">
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+          <!-- 3. Agregar JS -->
+        </select>
+
+        <label for="consulta">Consulta</label>
+        <!-- 4. Reemplazar por area de texto -->
+        <input type="tip: no es un tipo" disabled />
+
+        <div>
+          <!-- 5. Marcar por defecto -->
+          <input type="checkbox" name="rta_por_mail" required />
+          <span>Recibir respuesta por mail</span>
+        </div>
+
+        <button>Enviar formulario</button>
+      </fieldset>
+    </form>
+    <section id="datos_enviados">
+      <h2>Datos enviados:</h2>
+      <p>Aquí veras los datos al enviar el formulario</p>
+    </section>
+  </body>
+  <script>
+    const form = document.querySelector("form");
+    const datos_enviados = document.querySelector("#datos_enviados");
+
+    form.onsubmit = (event) => {
+      event.preventDefault();
+      const datos_crudos = [...event.target.elements];
+      const datos = datos_crudos
+        .map((e) => ({ clave: e.name, valor: e.value }))
+        .filter((e) => e.clave && e.valor);
+      mostrar_datos(datos);
+    };
+
+    function mostrar_datos(datos) {
+      let html_a_mostrar = "<h2>Datos enviados:</h2>";
+      datos.forEach((dato) => {
+        html_a_mostrar += `<p><b>${dato.clave}:</b> ${dato.valor}</p>`;
+      });
+      console.log(datos_enviados, html_a_mostrar);
+      datos_enviados.setHTML(html_a_mostrar);
+    }
+  </script>
+</html>
